@@ -45,6 +45,22 @@ pipeline {
                 '''
             }
         }
+        stage('sonar coverage') {
+            steps {
+                sh '''
+                pwd
+                ls -ll
+                cd devpos
+                ls -ll
+                java -version
+                mvn --version
+                mvn clean
+                mvn compile
+                mvn test
+                mvn sonar:sonar
+                '''
+            }
+        }
         stage('package') {
             steps {
                 sh '''
@@ -56,6 +72,14 @@ pipeline {
                 mvn --version
                 mvn clean
                 mvn package
+                '''
+            }
+        }
+        stage('artifact upload') {
+            steps {
+                sh '''
+                echo 'uploading artifacts to jfrog artifactory using jenkins pipeline'
+                curl -uadmin:Admin@12345 -T /c/Users/nares/.jenkins/workspace/pipeline-Jenkinsfile/devpos/target/naresh-1.jar "http://localhost:8081/artifactory/devops/"
                 '''
             }
         }

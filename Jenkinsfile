@@ -79,7 +79,7 @@ pipeline {
             steps {
                 sh '''
                 echo 'uploading artifacts to jfrog artifactory using jenkins pipeline'
-                curl -uadmin:Admin@12345 -T /c/Users/nares/.jenkins/workspace/pipeline-Jenkinsfile/devpos/target/naresh-1.jar "http://localhost:8081/artifactory/devops/"
+                curl -uadmin:Admin@12345 -T /c/Users/nares/.jenkins/workspace/pipeline-Jenkinsfile/devpos/target/vracademy-1.0.0.jar "http://localhost:8081/artifactory/devops/"
                 '''
             }
         }

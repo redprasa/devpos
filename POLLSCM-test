@@ -1,0 +1,4 @@
+By using this I am running my job when the code changes is done by your development team, based on that changes this job will execute and 
+compile, test,package , deploy, codequality, artifactory etc...
+
+ALL CI/CD operations it will perform

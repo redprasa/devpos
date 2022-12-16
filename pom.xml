@@ -25,6 +25,15 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>de.sprengnetter.jenkins.plugins</groupId>
+	    <artifactId>confluence-pipeline-steps</artifactId>
+	    <version>0.2</version>
+	    <packaging>hpi</packaging>
+	    <name>Confluence Pipeline Steps Plugin</name>
+	    <inceptionYear>2017</inceptionYear>
+	    <url>https://wiki.jenkins.io/display/JENKINS/Confluence+Steps+Pipeline+Plugin</url>
+    </dependency>
   </dependencies>
 
   <build>
